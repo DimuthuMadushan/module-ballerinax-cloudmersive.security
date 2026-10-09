@@ -1,4 +1,3 @@
-
 // Copyright (c) 2026, WSO2 LLC. (http://www.wso2.com).
 //
 // WSO2 LLC. licenses this file to you under the Apache License,
@@ -13,6 +12,7 @@
 // "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 // KIND, either express or implied.  See the License for the
 // specific language governing permissions and limitations
+// under the License.
 
 import ballerina/http;
 
