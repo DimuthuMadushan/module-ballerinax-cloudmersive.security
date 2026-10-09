@@ -5,7 +5,7 @@
     "title": "securityapi",
     "description": "The security APIs help you detect and block security threats."
   },
-  "host": "testapi.cloudmersive.com",
+  "host": "api.cloudmersive.com",
   "schemes": [
     "https"
   ],
@@ -41,7 +41,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of automatic threat detection on the input string",
             "schema": {
               "$ref": "#/definitions/StringAutomaticThreatDetection"
             }
@@ -85,7 +85,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the insecure deserialization JSON check",
             "schema": {
               "$ref": "#/definitions/StringInsecureDeserializationJsonDetection"
             }
@@ -129,7 +129,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the SQL injection check",
             "schema": {
               "$ref": "#/definitions/StringSqlInjectionDetectionResult"
             }
@@ -173,7 +173,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the XSS protection, including the normalized text",
             "schema": {
               "$ref": "#/definitions/StringXssProtectionResult"
             }
@@ -217,7 +217,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the XXE threat check",
             "schema": {
               "$ref": "#/definitions/StringXxeDetectionResult"
             }
@@ -261,7 +261,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the SSRF threat check on the URL",
             "schema": {
               "$ref": "#/definitions/UrlSsrfThreatDetectionResponseFull"
             }
@@ -305,7 +305,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the known-threat check on the IP address",
             "schema": {
               "$ref": "#/definitions/IPThreatDetectionResponse"
             }
@@ -349,7 +349,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the bot check on the IP address",
             "schema": {
               "$ref": "#/definitions/ThreatDetectionBotCheckResponse"
             }
@@ -393,7 +393,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Result of the Tor exit node check on the IP address",
             "schema": {
               "$ref": "#/definitions/ThreatDetectionTorNodeResponse"
             }
@@ -417,6 +417,7 @@
           "type": "boolean"
         },
         "CleanResult": {
+          "description": "True if the input contained no detected threats, false otherwise",
           "type": "boolean"
         },
         "ContainedJsonInsecureDeserializationAttack": {
